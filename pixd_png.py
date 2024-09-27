@@ -40,7 +40,7 @@ def main(argv):
         with open(input_file) as fp:
             lines = fp.readlines()
             for i, line in enumerate(lines):
-                line_arr = re.split('\033\[|m\0{9600}|m', line)
+                line_arr = re.split(r'\033\[|m\0{9600}|m', line)
                 line_one_arr = []
                 line_two_arr = []
                 for elem in line_arr:
